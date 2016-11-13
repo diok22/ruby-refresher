@@ -151,6 +151,9 @@ end
 # . e.g. the array ['cat', 'dog', 'fish'] becomes
 # ['a', 'c', 'd', 'f', 'g', 'h', 'i', 'o', 's', 't']
 def get_all_letters_in_array_of_words(array)
+  letters_string = array.join.chars
+  no_duplicate_letters = letters_string.uniq
+  array_of_letters_sorted = no_duplicate_letters.sort
 end
 
 # swap the keys and values in a hash. e.g.
