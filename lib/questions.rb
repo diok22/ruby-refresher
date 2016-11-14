@@ -70,11 +70,7 @@ end
 # turn a positive integer into a negative integer. A negative integer
 # stays negative
 def make_numbers_negative(number)
-  if number > 0
-    -1 * number
-  elsif number < 0
-    number
-  end
+  -1 * number.abs
 end
 
 # turn an array of numbers into two arrays of numbers, one an array of
@@ -167,7 +163,7 @@ end
 # add all the keys and all the values together, e.g.
 # {1 => 1, 2 => 2} becomes 6
 def add_together_keys_and_values(hash)
-  hash.to_a.inject(:+).inject(:+)
+  hash.to_a.flatten.inject(:+)
 end
 
 # take out all the capital letters from a string
@@ -191,6 +187,7 @@ end
 # take a date and format it like dd/mm/yyyy, so Halloween 2013
 # becomes 31/10/2013
 def format_date_nicely(date)
+  date.strftime('%d/%m/%Y')
 end
 
 # get the domain name *without* the .com part, from an email address
