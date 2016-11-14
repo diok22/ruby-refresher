@@ -227,11 +227,12 @@ end
 def is_a_3_dot_range?(range)
   # array = [*range]
   # array.include?(range) ? true : false
-  range.exclude_end
+  range.exclude_end?
 end
 
 # get the square root of a number
 def square_root_of(number)
+  Math.sqrt(number)
 end
 
 # count the number of words in a file
