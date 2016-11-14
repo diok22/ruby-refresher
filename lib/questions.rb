@@ -204,6 +204,9 @@ end
 # 'the lion the witch and the wardrobe' becomes
 # 'The Lion the Witch and the Wardrobe'
 def titleize_a_string(string)
+   check = ['a', 'and', 'the']
+   x = string.downcase.split(' ').map!{ |element| check.include?(element) ? element : element.capitalize}.join(' ')
+   x[0].upcase + x[1..-1]
 end
 
 # return true if a string contains any special characters
